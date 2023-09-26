@@ -94,13 +94,10 @@ Pay.propTypes = {
   createOrderCallback: PropTypes.string.isRequired,
   address: PropTypes.string,
   theme: PropTypes.object,
-  style: PropTypes.object,
-  title: PropTypes.string,
   children: PropTypes.element,
 };
 Pay.defaultProps = {
   theme: {
     color: '#008080',
   },
-  title: 'Pay',
 };
