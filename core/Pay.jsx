@@ -1,26 +1,10 @@
 import React, { useContext } from 'react';
 import { RazorPayContext } from '../RazorPayProvider';
-import loadRazorpay from './RazorpayLoader';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 export default function Pay(props) {
-  const { setIsLoading, setIsError } = useContext(RazorPayContext);
+  const { setIsError } = useContext(RazorPayContext);
   const displayRazorPay = async () => {
-    try {
-      setIsLoading(true);
-      const res = await loadRazorpay();
-      if (!res) {
-        setIsError(true);
-        console.log('Razorpay error: Failed to load razorpay');
-        return;
-      }
-    } catch (error) {
-      setIsError(true);
-      console.log('Razorpay load error: ', error);
-    } finally {
-      setIsLoading(false);
-    }
-
     let result;
     try {
       result = await axios.post(props.createOrderCallback, {

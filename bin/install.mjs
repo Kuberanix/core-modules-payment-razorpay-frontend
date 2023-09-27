@@ -14,7 +14,8 @@ const moduleName = 'payment';
 const currentPath = process.cwd();
 const projectPath = path.join(currentPath, moduleName);
 // TODO: change to your boilerplate repo
-const git_repo = 'https://github.com/Kuberanix/core-modules-payment-razorpay-frontend';
+const git_repo =
+  'https://github.com/Kuberanix/core-modules-payment-razorpay-frontend';
 // create project directory
 if (fs.existsSync(projectPath)) {
   console.log(`The file ${moduleName} already exist in the current directory`);
