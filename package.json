@@ -1,10 +1,13 @@
 {
   "name": "core-modules-payment-razorpay-frontend",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
     "prepare": "git init && husky install && chmod ug+x ./.husky/*"
+  },
+  "bin": {
+    "core-modules-payment-razorpay-frontend": "bin/install.mjs"
   },
   "devDependencies": {
     "eslint": "^8.50.0",
