@@ -1,4 +1,5 @@
 import React, { useState, createContext, useEffect, useCallback } from 'react';
+import loadRazorpay from '../payment/core/RazorpayLoader';
 import PropTypes from 'prop-types';
 export const RazorPayContext = createContext({
   isLoading: true,
